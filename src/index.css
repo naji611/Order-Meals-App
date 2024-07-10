@@ -13,7 +13,14 @@ body {
   color: #d9e2f1;
   min-height: 100vh;
 }
-
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.center.failed {
+  color: rgb(207, 11, 50);
+}
 #main-header {
   display: flex;
   justify-content: space-between;

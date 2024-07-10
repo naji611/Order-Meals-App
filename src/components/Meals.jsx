@@ -18,7 +18,7 @@ export default function Meals() {
         setMeals(resData);
       } catch (error) {
         setLoading(false);
-        setError(resData.message || { message: "Cant fetch meals!" });
+        setError({ message: "Cant fetch meals!" });
       }
     };
 
@@ -26,7 +26,7 @@ export default function Meals() {
   }, []);
   return (
     <section>
-      {error && <h2>{error.message}</h2>}
+      {error && <h1 className="center failed">{error.message}</h1>}
       {loading && !error && <h1 className="center">Loading...</h1>}
       {meals && (
         <ul id="meals">
